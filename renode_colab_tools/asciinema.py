@@ -25,6 +25,29 @@ def display_asciicast(path):
     content = """
 <div id="asciinema-cast-player-{name}" style="width: 50%"></div>
 <link rel="stylesheet" type="text/css" href="/nbextensions/google.colab/asciinema-player.css" />
+<style>
+.asciinema {{
+  &-terminal {{
+    padding: 20px !important
+    border: none !important
+    color: #FFFFFF !important
+    background: #007DED !important
+  }}
+  &-terminal * {{
+    color: #FFFFFF !important
+    background: #007DED !important
+    font-family: 'Ubuntu Mono' !important
+    font-size: 12px !important
+    line-height: 12px !important
+  }}
+  &-player-wrapper {{
+    border-radius: 5px !important
+  }}
+  &-terminal, &-player-wrapper {{
+    min-height: 230px
+  }}
+}}
+</style>
 <script>
     async function startPlayer() {{
         const script = document.createElement('script');
