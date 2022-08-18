@@ -11,7 +11,7 @@ def provision_speedscope():
 
     mod_path = Path(__file__).parent.resolve() / 'speedscope'
     for file in mod_path.iterdir():
-        shutil.copy(file, colab_dir / file)
+        shutil.copy(file, colab_dir / file.name)
 
 
 def display_speedscope(path):
