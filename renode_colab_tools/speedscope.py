@@ -24,7 +24,7 @@ def display_speedscope(path):
 
     content = """
 <div id="asciinema-cast-player-{name}" style="width: 50%"></div>
-<iframe src="/nbextensions/google.colab/speedscope/index.html#profileURL={path}" width="552" height="400" frameBorder="0" />
+<iframe src="nbextensions/google.colab/speedscope/index.html#profileURL={path}" width="552" height="400" frameBorder="0" />
 """.format(path=path, name=name)
     display(IPython.display.HTML(content))
 
