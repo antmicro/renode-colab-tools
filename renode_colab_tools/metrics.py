@@ -41,7 +41,7 @@ def show_executed_instructions(metricsParser, fraction=1):
   fig = go.Figure()
 
   for cpuId, cpuName in cpus.items():
-      entries = _reduce_sample(data[data['cpuId'] == bytes([cpuId])], fraction)
+      entries = _reduce_sample(data[data['cpuId'] == cpuId], fraction)
       if entries.empty:
           continue
       fig.add_trace(go.Scatter(x=entries['virtualTime'], y=entries['executedInstruction'], name=cpuName))
